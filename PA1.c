@@ -19,7 +19,7 @@ void* increment_t1(void *arg)
     }
     
 
-    for(int j=0; j<10; j++)
+    for(int j=0; j<100; j++)
     {
         sem_wait(&mutex);
         printf("T1");
@@ -34,7 +34,7 @@ void* increment_t2(void *arg)
 {
     sem_wait(&first_);
 
-    for(int j=0; j<10; j++)
+    for(int j=0; j<100; j++)
     {
         sem_wait(&mutex);
         printf("T2");
